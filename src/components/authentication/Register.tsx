@@ -1,4 +1,5 @@
-import React, { useState, FormEvent } from 'react';
+import { useState } from 'react';
+import type { FormEvent } from 'react';
 import './register.css'; // Import the external CSS file
 
 // Define the shape for the form data

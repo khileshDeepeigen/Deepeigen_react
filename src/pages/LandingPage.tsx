@@ -1,6 +1,4 @@
-import React from 'react'
 import HeroSection from '../components/landing/HeroSection'
-import Navigation from '../components/navigation/Navigation'
 import Courses from '../components/landing/Courses'
 import AI_model from '../components/landing/AI_model'
 import SubscriptionPricing from '../components/landing/SubscriptionPricing'

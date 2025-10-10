@@ -1,6 +1,5 @@
-import React from "react";
-import { FaLinkedin, FaTwitter} from "react-icons/fa"; // or any icons you prefer
 import "../landing/footer.css"
+import { FaLinkedin, FaTwitter} from "react-icons/fa"; // or any icons you prefer
 import { IoCall } from "react-icons/io5";
 import { IoMdMail } from "react-icons/io";
 const SocialIcons = () => {
