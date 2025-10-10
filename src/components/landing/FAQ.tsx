@@ -167,9 +167,10 @@ const faqs = [
 ];
 
 const FAQ = () => {
-    const [openIndex, setOpenIndex] = useState(null);
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-    const toggleFAQ = (index) => {
+    // Type the parameter explicitly
+    const toggleFAQ = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
@@ -177,7 +178,7 @@ const FAQ = () => {
         <section className="faq">
             <h2 className="faq__title">Frequently Asked Questions</h2>
 
-            {faqs.map((faq, index) => (
+            {faqs.map((faq, index: number) => (
                 <div key={index} className="faq__item">
                     <div className="faq__question" onClick={() => toggleFAQ(index)}>
                         <h3>{faq.question}</h3>
