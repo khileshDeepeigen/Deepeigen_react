@@ -1,4 +1,3 @@
-import React from "react";
 import svgPaths from "../imports/svg";
 import { Link } from "react-router-dom";
 import "./footer.css";
