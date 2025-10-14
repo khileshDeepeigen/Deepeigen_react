@@ -5,32 +5,18 @@ import { Link } from 'react-router-dom';
 
 // Define the shape for the form data
 interface FormData {
-  firstName: string;
-  lastName: string;
   email: string;
-  username: string;
-  profession: string;
-  phoneNo: string;
   password: string;
-  reEnterPassword: string;
-  country: string;
 }
 
 const Login: React.FC = () => {
 
-  const [rememberMe, setRememberMe] = useState('')
+  const [rememberMe, setRememberMe] = useState(false)
   
   // State to hold all form data
   const [formData, setFormData] = useState<FormData>({
-    firstName: '',
-    lastName: '',
     email: '',
-    username: '',
-    profession: '',
-    phoneNo: '',
     password: '',
-    reEnterPassword: '',
-    country: '',
   });
 
   // State to toggle password visibility
@@ -52,15 +38,6 @@ const Login: React.FC = () => {
     // In a real application, you would send this data to an API
   };
 
-  // List of countries (minimal example)
-  const countries = [
-    'Select your country of residence',
-    'United States',
-    'Canada',
-    'India',
-    'United Kingdom',
-    // ... add more countries
-  ];
 
   return (
     <div className="register-page">
