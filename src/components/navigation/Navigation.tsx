@@ -31,7 +31,7 @@ export default function Navigation() {
             <svg className="chevron" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg"><path d="M16.5766 7.5L10.7432 12.5L4.90991 7.5" /></svg>
           </button>
           <a href="#" className="nav__link">AI Labs</a>
-          <a href="#" className="nav__link">Team</a>
+          <Link to="/team" className="nav__link">Team</Link>
           <a href="#" className="nav__link">Pricing</a>
           <button className="nav__link">
             Company

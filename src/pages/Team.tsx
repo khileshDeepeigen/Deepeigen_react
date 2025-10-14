@@ -1,7 +1,10 @@
+import TeamComp from "../components/team/TeamComp"
 
 const Team = () => {
   return (
-    <div>Team</div>
+    <>
+    <TeamComp />
+    </>
   )
 }
 

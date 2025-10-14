@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
-import './register.css'; // Import the external CSS file
+import './auth.css'; // Import the external CSS file
+import { Link } from 'react-router-dom';
 
 // Define the shape for the form data
 interface FormData {
@@ -62,14 +63,9 @@ const Register: React.FC = () => {
     <div className="register-page">
       {/* Left panel with branding and purple gradient */}
       <div className="register-panel-left">
-        <div className="logo-container">
-          {/* Placeholder for the logo/branding text */}
-          <div className="logo-text">
-            <span className="logo-text-eal">EAL</span> Deep Eigen <br /> AI LABS
-          </div>
-        </div>
         <div className="slogan">
-          BRILLIANCE <br /> INITIATED
+          <h1>BRILLIANCE</h1>
+          <h1>INITIATED</h1>
         </div>
       </div>
 
@@ -233,7 +229,7 @@ const Register: React.FC = () => {
         </form>
 
         <p className="login-link-container">
-          Already have an account? <a href="/login" className="login-link">Login</a>
+          Already have an account? <Link to="/login" className="login-link">Login</Link>
         </p>
       </div>
     </div>

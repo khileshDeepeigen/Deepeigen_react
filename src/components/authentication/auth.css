@@ -1,0 +1,374 @@
+/* --- Global Reset and Page Layout --- */
+.register-page {
+    display: flex;
+    min-height: 90vh;
+}
+
+/* --- Left Panel (Branding) --- */
+.register-panel-left {
+    flex: 0 0 45%;
+    background: linear-gradient(180deg, #1D1F8E 0%, #061038 100%);
+    color: white;
+    padding: 80px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Align logo to the top */
+    position: relative;
+    /* For absolute positioning of slogan */
+    overflow: hidden;
+}
+
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 40px;
+        font-weight: 200;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+}
+
+/* --- Right Panel (Form) --- */
+.register-panel-right {
+    flex: 1;
+    /* Takes the remaining space */
+    padding: 60px 10%;
+    background-color: white;
+
+}
+
+.register-title {
+    font-size: 40px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.register-subtitle {
+    color: #6a6a6a;
+    margin-bottom: 40px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Space between rows */
+}
+
+.form-row {
+    display: flex;
+    gap: 30px;
+    /* Space between columns in a row */
+}
+
+.form-group {
+    flex: 1;
+    /* Makes each group take equal space in the row */
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.required {
+    color: red;
+    margin-left: 2px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    /* Ensures input fills the flex container */
+    box-sizing: border-box;
+    /* Include padding/border in element's total width/height */
+    font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #8a2be2;
+    /* Accent color on focus */
+    outline: none;
+    box-shadow: 0 0 0 1px #8a2be2;
+}
+
+/* --- Password Specific Styling --- */
+.password-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-input-container input {
+    padding-right: 45px;
+    /* Make space for the toggle button */
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: #888;
+    font-size: 18px;
+}
+
+/* --- Select/Dropdown Styling --- */
+.form-group select {
+    /* Hide default arrow in some browsers and use a custom one via background image */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+}
+
+.placeholder-option {
+    color: #999;
+}
+
+.placeholder-option option[disabled] {
+    color: #999;
+}
+
+.placeholder-option option:not([disabled]) {
+    color: #333;
+    /* Normal color for selectable options */
+}
+
+.login__rememberMeForm {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login__rememberMe {
+    display: flex;
+    gap: 10px;
+}
+
+.remember_checkbox {
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login__forgotPassword {
+    text-decoration: none;
+    color: rgb(23, 76, 210);
+}
+
+/* --- Register Button --- */
+.register-button {
+    background-color: rgb(23, 76, 210);
+    /* Deep purple color */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+    font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.register-button:hover {
+    background-color: rgb(11, 71, 223);
+}
+
+/* --- Login Link --- */
+.login-link-container {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #6a6a6a;
+}
+
+.login-link {
+    color: rgb(23, 76, 210);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsiveness (Optional but recommended) --- */
+@media (max-width: 900px) {
+    .register-page {
+        flex-direction: column;
+        /* Stack panels vertically on smaller screens */
+    }
+
+    .register-panel-left {
+        flex: 0 0 auto;
+        height: 250px;
+        /* Reduced height for the branding section */
+        padding: 30px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .slogan {
+        font-size: 30px;
+    }
+
+    .register-panel-right {
+        padding: 40px 10%;
+    }
+
+    .form-row {
+        flex-direction: column;
+        /* Stack form inputs vertically */
+        gap: 0;
+    }
+}
+
+
+
+/* Verification Page Style */
+
+.verification__container {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 31px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header */
+.verification__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.verification__title {
+  font-size: 40px;
+  font-weight: 400;
+  color: #1a212f;
+}
+
+.verification__header h3 {
+  font-weight: 300;
+  font-size: 20px;
+  color: rgba(26, 33, 47, 0.65);
+}
+
+.verification__mail {
+  color: rgb(23, 76, 210);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* Description */
+.verification__desc {
+  max-width: 557px;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(26, 33, 47, 0.65);
+  line-height: 1.5;
+}
+
+/* Resend Section */
+.verification__resend {
+  color: rgba(26, 33, 47, 0.65);
+  font-size: 18px;
+}
+
+.verification__click {
+  color: rgb(23, 76, 210);
+  cursor: pointer;
+}
+
+.verification__click:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsive Breakpoints ---------- */
+
+/* For tablets (768px and below) */
+@media (max-width: 768px) {
+  .verification__title {
+    font-size: 32px;
+  }
+
+  .verification__header h3 {
+    font-size: 18px;
+  }
+
+  .verification__mail {
+    font-size: 18px;
+  }
+
+  .verification__desc {
+    font-size: 18px;
+    max-width: 90%;
+  }
+
+  .verification__resend {
+    font-size: 16px;
+  }
+}
+
+/* For mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .verification__container {
+    gap: 24px;
+    padding: 16px;
+  }
+
+  .verification__title {
+    font-size: 26px;
+  }
+
+  .verification__header h3 {
+    font-size: 16px;
+  }
+
+  .verification__mail {
+    font-size: 16px;
+    word-break: break-word;
+  }
+
+  .verification__desc {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .verification__resend {
+    font-size: 15px;
+  }
+}
