@@ -27,12 +27,12 @@ export default function Navigation() {
         {/* Desktop Navigation Links */}
         <div className="nav__links" role="navigation" aria-label="Main">
           <button className="nav__link">
-            Courses
+            <Link to="/courses" className="nav__link">Courses</Link>
             <svg className="chevron" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg"><path d="M16.5766 7.5L10.7432 12.5L4.90991 7.5" /></svg>
           </button>
           <a href="#" className="nav__link">AI Labs</a>
           <Link to="/team" className="nav__link">Team</Link>
-          <a href="#" className="nav__link">Pricing</a>
+          <Link to="/pricing" className="nav__link">Pricing</Link>
           <button className="nav__link">
             Company
             <svg className="chevron" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg"><path d="M16.5766 7.5L10.7432 12.5L4.90991 7.5" /></svg>

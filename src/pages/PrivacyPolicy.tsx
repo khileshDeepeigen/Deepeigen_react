@@ -1,7 +1,10 @@
+import PrivacyPolicyComp from "../components/privacyPolicy/PrivacyPolicyComp"
 
 const PrivacyPolicy = () => {
   return (
-    <div>PrivacyPolicy</div>
+    <div>
+      <PrivacyPolicyComp />
+    </div>
   )
 }
 

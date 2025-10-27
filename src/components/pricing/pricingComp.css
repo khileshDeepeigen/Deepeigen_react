@@ -1,0 +1,44 @@
+.Pricing__Page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Pricing__UserHeader {
+    padding: 80px 10vw;
+    width: 100%;
+    height: 30vh;
+    background: linear-gradient(to right, #2B1062, #6E228C);
+    color: white;
+    h1{
+        font-size: 40px;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+    }
+    p{
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+
+.Pricing__Container {
+    padding: 40px 0px;
+    width: 80vw;
+}
+
+.P__Course_Header{
+    padding: 40px 0px;
+    h1{
+        font-size: 40px;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+    }
+    p{
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: 300;
+    }
+}

@@ -1,7 +1,10 @@
+import CoursesComp from "../components/courses/CoursesComp"
 
 const Courses = () => {
   return (
-    <div>Courses</div>
+    <div>
+      <CoursesComp />
+    </div>
   )
 }
 

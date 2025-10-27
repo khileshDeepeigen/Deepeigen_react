@@ -87,6 +87,10 @@
 }
 
 .pricing-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   max-width: 1363px;
   margin: 0 auto;
 }
@@ -110,7 +114,7 @@
   position: relative;
 }
 
-.full-access {
+.premium-access {
   border-color: var(--pricing-border-primary);
   max-width: 464px;
 }
@@ -354,18 +358,32 @@
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  background: var(--pricing-bg-primary);
   border: none;
   color: var(--pricing-fg-inverse-1);
   font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
-  font-size: 20px;
   font-weight: 600;
   line-height: 93%;
   cursor: pointer;
   transition: background 0.3s ease;
 }
+.basic-access-btn{
+  border: 1px solid var(--pricing-bg-primary);
+  color: var(--pricing-bg-primary);
+  font-size: 16px;
+  background: transparent;
+}
+.standard-access-btn{
+  border: 1px solid var(--pricing-bg-primary);
+  color: var(--pricing-bg-primary);
+  font-size: 16px;
+  background: transparent;
+}
+.premium-access-btn{
+  background: var(--pricing-bg-primary);
+  font-size: 20px;
+}
 
-.join-now-btn:hover {
+.premium-access-btn:hover {
   background: #0d3ba8;
 }
 
@@ -398,6 +416,8 @@
   gap: 20px;
   border-radius: 20px;
   background: var(--pricing-bg-white);
+  width: fit-content;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .playlist-header {

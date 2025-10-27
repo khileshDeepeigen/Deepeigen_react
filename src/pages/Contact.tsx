@@ -1,7 +1,10 @@
+import ContactComp from "../components/contact/ContactComp"
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div>
+      <ContactComp />
+    </div>
   )
 }
 

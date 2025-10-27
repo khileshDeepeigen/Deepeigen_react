@@ -47,10 +47,27 @@ const FooterLinks = () => (
         <div className="footer__section">
             <h4>Deep Eigen AI Labs</h4>
             <div className="footer__list">
-                <p>About Us</p>
-                <p>Courses</p>
-                <p>Team</p>
-                <p>Contact</p>
+                <p>
+                    <Link to="/about">
+                        About Us
+                    </Link>
+                </p>
+                <p>
+                    <Link to="/courses">
+                        Courses
+                    </Link>
+                </p>
+                <p>
+                    <Link to="/team">
+                        Team
+                    </Link>
+                </p>
+                <p>
+                    <Link to="/contact">
+                        Contact
+                    </Link>
+                </p>
+
             </div>
         </div>
         <div className="footer__section">
@@ -59,7 +76,11 @@ const FooterLinks = () => (
                 <p>FAQs</p>
                 <p>Pricing</p>
                 <p>Terms of Service</p>
-                <p>Privacy Policy</p>
+                <p>
+                    <Link to="/privacy_policy">
+                        Privacy Policy
+                    </Link>
+                </p>
                 <p>Sitemap</p>
                 <p>Subscribe</p>
             </div>
