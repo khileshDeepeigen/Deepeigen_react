@@ -73,9 +73,21 @@ const FooterLinks = () => (
         <div className="footer__section">
             <h4>Quick Links</h4>
             <div className="footer__list">
-                <p>FAQs</p>
-                <p>Pricing</p>
-                <p>Terms of Service</p>
+                <p>
+                    <Link to="/faqs">
+                        FAQs
+                    </Link>
+                </p>
+                <p>
+                                        <Link to="/pricing">
+                        Pricing
+                    </Link>
+                </p>
+                <p>
+                    <Link to="/terms_conditions">
+                        Terms of service
+                    </Link>
+                </p>
                 <p>
                     <Link to="/privacy_policy">
                         Privacy Policy

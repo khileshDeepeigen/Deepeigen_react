@@ -2,7 +2,7 @@ import HeroSection from '../components/landing/HeroSection'
 import Courses from '../components/landing/Courses'
 import AI_model from '../components/landing/AI_model'
 import SubscriptionPricing from '../components/landing/SubscriptionPricing'
-import FAQ from '../components/landing/FAQ'
+import FAQ from './FAQ'
 
 const LandingPage = () => {
   return (

@@ -1,0 +1,95 @@
+.Legal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.Legal__Container {
+  width: 80vw;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+}
+
+/* Typography */
+.Legal__Container h1 {
+  font-size: 40px;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+
+.Legal__Container p {
+  color: #1a212fb2;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+.Legal__Container h4 {
+  color: #1a212f;
+  letter-spacing: -0.02em;
+  font-size: 20px; /* fixed incorrect 'color: 20px' */
+  font-weight: 400;
+}
+
+.Legal_divider {
+  width: 100%;
+  height: 1px;
+  background-color: #1a212f3d;
+}
+
+/* 🌐 Responsive Design */
+@media (max-width: 768px) {
+  .Legal {
+    padding: 40px 0;
+  }
+
+  .Legal__Container {
+    width: 90vw;
+    padding: 24px;
+    gap: 24px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 10px;
+  }
+
+  .Legal__Container h1 {
+    font-size: 28px;
+  }
+
+  .Legal__Container h4 {
+    font-size: 18px;
+  }
+
+  .Legal__Container p {
+    font-size: 13px;
+    line-height: 160%;
+  }
+}
+
+/* 📱 Even smaller devices */
+@media (max-width: 480px) {
+  .Legal {
+    padding: 30px 0;
+  }
+
+  .Legal__Container {
+    width: 95vw;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .Legal__Container h1 {
+    font-size: 24px;
+  }
+
+  .Legal__Container h4 {
+    font-size: 16px;
+  }
+
+  .Legal__Container p {
+    font-size: 12px;
+  }
+}

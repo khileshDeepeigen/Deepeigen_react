@@ -11,6 +11,9 @@ import Media from './pages/Media'
 import Courses from './pages/Courses'
 import Pricing from './pages/Pricing'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsCondition from './pages/TermsCondition'
+import PrivacyPolicyGDPR from './pages/PrivacyPolicyGDPR'
+import FAQ from './pages/FAQ'
 
 function App() {
 
@@ -30,6 +33,9 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/privacy_policy" element={<PrivacyPolicy />} />
+          <Route path="/privacy_policyGDPR" element={<PrivacyPolicyGDPR />} />
+          <Route path="/terms_conditions" element={<TermsCondition />} />
+          <Route path="/faqs" element={<FAQ />} />
 
         </Route>
       </ Routes>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./faq.css";
+import "./faqComp.css";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
@@ -166,7 +166,7 @@ const faqs = [
     },
 ];
 
-const FAQ = () => {
+const FAQComp = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     // Type the parameter explicitly
@@ -196,4 +196,4 @@ const FAQ = () => {
     );
 };
 
-export default FAQ;
+export default FAQComp;

@@ -1,4 +1,4 @@
-import PrivacyPolicyComp from "../components/privacyPolicy/PrivacyPolicyComp"
+import PrivacyPolicyComp from "../components/legal/PrivacyPolicyComp"
 
 const PrivacyPolicy = () => {
   return (
