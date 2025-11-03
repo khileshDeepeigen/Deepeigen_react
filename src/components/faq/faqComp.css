@@ -1,9 +1,11 @@
 .faq {
-  max-width: 1363px;
+  width: 80vw;
+  /* max-width: 1363px; */
   margin: 80px auto;
-  padding: 0 144px;
+  /* padding: 0 144px; */
   font-family: "Inter", sans-serif;
   color: #1a1a1a;
+  /* border: 1px solid black; */
 }
 
 .faq__title {
@@ -21,7 +23,7 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  padding-bottom: 24;
+  padding: 12px 0px;
 }
 
 .faq__question h3 {

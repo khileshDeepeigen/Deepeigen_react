@@ -14,6 +14,9 @@ import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsCondition from './pages/TermsCondition'
 import PrivacyPolicyGDPR from './pages/PrivacyPolicyGDPR'
 import FAQ from './pages/FAQ'
+import CourseDetails from './components/courses/CourseDetails'
+import MakePlaylist from './components/makePlaylist/MakePlaylist'
+import AboutUs from './pages/AboutUs'
 
 function App() {
 
@@ -36,6 +39,9 @@ function App() {
           <Route path="/privacy_policyGDPR" element={<PrivacyPolicyGDPR />} />
           <Route path="/terms_conditions" element={<TermsCondition />} />
           <Route path="/faqs" element={<FAQ />} />
+          <Route path="/course_details" element={<CourseDetails />} />
+          <Route path="/make_playlist" element={<MakePlaylist />} />
+          <Route path="/about" element={<AboutUs />} />
 
         </Route>
       </ Routes>

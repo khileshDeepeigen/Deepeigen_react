@@ -86,7 +86,7 @@ export default function HeroSection() {
           <div className="divider" />
 
           {/* Access to Research Tools */}
-          <div className="feature" style={{ width: 132 }}>
+          <div className="feature">
             <img src={lab} alt="Certificates" />
             <p className="feature__title">Access to Research Tools</p>
           </div>
@@ -94,7 +94,7 @@ export default function HeroSection() {
           <div className="divider" />
 
           {/* Experienced Coach */}
-          <div className="feature" style={{ width: 103 }}>
+          <div className="feature">
             <img src={teacher} alt="Certificates" />
             <p className="feature__title">Experienced Coach</p>
           </div>
@@ -102,7 +102,7 @@ export default function HeroSection() {
           <div className="divider" />
 
           {/* Hands on Training */}
-          <div className="feature" style={{ width: 103 }}>
+          <div className="feature">
             <img src={note} alt="Certificates" />
             <p className="feature__title">Hands on Training</p>
           </div>
@@ -110,7 +110,7 @@ export default function HeroSection() {
           <div className="divider" />
 
           {/* Earn Certificates */}
-          <div className="feature" style={{ width: 103 }}>
+          <div className="feature">
             <img src={certificates} alt="Certificates" />
             <p className="feature__title">Earn Certificates</p>
           </div>

@@ -15,9 +15,12 @@ body {
 
 /* Container scales fluidly with clamp() */
 .home-container {
-  width: min(90%, 1440px);
+  /* width: min(90%, 1440px); */
+  width: 80vw;
   margin: 0 auto;
-  padding: clamp(1rem, 2vw, 2.5rem);
+  /* padding: clamp(1rem, 2vw, 2.5rem); */
+  /* background-color: red; */
+  padding: 2em 0;
 }
 
 /* Banner */
@@ -153,6 +156,7 @@ body {
   gap: 1.5rem;
   box-shadow: 0 4px 11px rgba(0, 0, 0, 0.12);
   flex-wrap: wrap;
+  width: 90%;
 }
 
 .feature {

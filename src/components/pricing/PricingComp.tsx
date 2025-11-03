@@ -1,4 +1,4 @@
-import CourseCard from "../courses/CourseCard"
+import CourseCard from "../courses/CourseCardITem"
 import PricingCard from "./PricingCard"
 import "./pricingComp.css"
 

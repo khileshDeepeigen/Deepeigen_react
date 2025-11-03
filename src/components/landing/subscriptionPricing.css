@@ -22,13 +22,15 @@
 .pricing-container {
   padding: 63px 20px;
   background: var(--pricing-bg-white);
-  font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif;
+  /* font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif; */
 }
 
 .pricing-header {
-  max-width: 776px;
+  /* max-width: 776px; */
+  width: 80vw;
   margin: 0 auto 54px;
   text-align: center;
+  /* border: 1px solid black; */
 }
 
 .pricing-title {
