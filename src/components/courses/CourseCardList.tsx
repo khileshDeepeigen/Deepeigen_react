@@ -21,7 +21,7 @@ interface Course {
     image: string;
     duration: string;
     category: string;
-    assignments: string;
+    assignments: number;
     price: number;
     originalPrice: string;
 }

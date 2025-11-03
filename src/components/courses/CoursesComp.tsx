@@ -10,8 +10,8 @@ const CoursesComp = () => {
       description: "A theoretically deep 7 weeks course to provide the fundamentals of machine learning with mathematical rigour, to for necessary prerequisites for other courses.",
       duration: "6 Months",
       category: "1A",
-      assignments: "28",
-      price: "999",
+      assignments: 28,
+      price: 999,
       originalPrice: "5,999",
       image: "https://api.builder.io/api/v1/image/assets/TEMP/d534ad339983623000d55526c9a3e7a6d8407489?width=734"
     },
@@ -21,8 +21,8 @@ const CoursesComp = () => {
       description: "A theoretically deep 7 weeks course to provide the fundamentals of machine learning with mathematical rigour, to for necessary prerequisites for other courses.",
       duration: "6 Months",
       category: "1A",
-      assignments: "28",
-      price: "999",
+      assignments: 28,
+      price: 999,
       originalPrice: "5,999",
       image: "https://api.builder.io/api/v1/image/assets/TEMP/d534ad339983623000d55526c9a3e7a6d8407489?width=734"
     },
@@ -32,8 +32,8 @@ const CoursesComp = () => {
       description: "A theoretically deep 7 weeks course to provide the fundamentals of machine learning with mathematical rigour, to for necessary prerequisites for other courses.",
       duration: "6 Months",
       category: "1A",
-      assignments: "28",
-      price: "999",
+      assignments: 28,
+      price: 999,
       originalPrice: "5,999",
       image: "https://api.builder.io/api/v1/image/assets/TEMP/d534ad339983623000d55526c9a3e7a6d8407489?width=734"
     },
@@ -43,8 +43,8 @@ const CoursesComp = () => {
       description: "A theoretically deep 7 weeks course to provide the fundamentals of machine learning with mathematical rigour, to for necessary prerequisites for other courses.",
       duration: "6 Months",
       category: "1A",
-      assignments: "28",
-      price: "999",
+      assignments: 28,
+      price: 999,
       originalPrice: "5,999",
       image: "https://api.builder.io/api/v1/image/assets/TEMP/d534ad339983623000d55526c9a3e7a6d8407489?width=734"
     },
@@ -54,8 +54,8 @@ const CoursesComp = () => {
       description: "A theoretically deep 7 weeks course to provide the fundamentals of machine learning with mathematical rigour, to for necessary prerequisites for other courses.",
       duration: "6 Months",
       category: "1A",
-      assignments: "28",
-      price: "999",
+      assignments: 28,
+      price: 999,
       originalPrice: "5,999",
       image: "https://api.builder.io/api/v1/image/assets/TEMP/d534ad339983623000d55526c9a3e7a6d8407489?width=734"
     },
@@ -65,8 +65,8 @@ const CoursesComp = () => {
       description: "A theoretically deep 7 weeks course to provide the fundamentals of machine learning with mathematical rigour, to for necessary prerequisites for other courses.",
       duration: "6 Months",
       category: "1A",
-      assignments: "28",
-      price: "999",
+      assignments: 28,
+      price: 999,
       originalPrice: "5,999",
       image: "https://api.builder.io/api/v1/image/assets/TEMP/d534ad339983623000d55526c9a3e7a6d8407489?width=734"
     }
