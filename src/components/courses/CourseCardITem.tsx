@@ -1,4 +1,4 @@
-import { FC } from "react"
+import  type { FC } from "react"
 import "../landing/courses.css"
 import { Link } from "react-router-dom";
 
