@@ -1,10 +1,10 @@
 /* Course Details Page Styles */
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 .course-container {
   min-height: 100vh;
@@ -242,7 +242,7 @@
 
 .course-details-card {
   border-radius: 0.75rem;
-  border: 1px solid #520a5d;
+  /* border: 1px solid #520a5d; */
   background: #fff;
   overflow: hidden;
   position: sticky;

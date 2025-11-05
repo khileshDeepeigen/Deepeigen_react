@@ -5,15 +5,11 @@ import logo_svg from "../../assets/Logo/logo.svg"
 import SocialIcons from "../footer/SocialIcons";
 
 const Logo = () => (
-    <Link to="/" className="logo">
-        <img
-            className="logo__icon"
-            src={logo_svg}
-            alt="Deep Eigen AI Labs"
-        />
-        <div className="logo__text">
-            <h2>Deep Eigen</h2>
-            <h3>AI Labs</h3>
+    <Link to="/" className="flex items-center gap-3">
+        <img src={logo_svg} alt="Deep Eigen AI Labs" className="w-15 h-auto" />
+        <div>
+            <h2 className="text-lg font-semibold text-white-900 leading-tight">Deep Eigen</h2>
+            <h3 className="text-sm text-white-600 font-medium">AI Labs</h3>
         </div>
     </Link>
 );
@@ -63,7 +59,7 @@ const FooterLinks = () => (
                     </Link>
                 </p>
                 <p>
-                    <Link to="/contact">
+                    <Link to="/contactus">
                         Contact
                     </Link>
                 </p>
@@ -79,7 +75,7 @@ const FooterLinks = () => (
                     </Link>
                 </p>
                 <p>
-                                        <Link to="/pricing">
+                    <Link to="/pricing">
                         Pricing
                     </Link>
                 </p>

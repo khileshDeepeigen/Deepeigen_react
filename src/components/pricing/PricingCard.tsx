@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 const PricingCard = () => {
     return (
@@ -443,7 +444,9 @@ const PricingCard = () => {
                         <h2 className="playlist-title">Create Your Own Playlist</h2>
                         <p className="playlist-description">Choose or select any courses or lectures of your liking and create a custom plan</p>
                     </div>
-                    <button className="create-playlist-btn">Create Playlist →</button>
+                    <Link to="/make_playlist">
+                        <button className="create-playlist-btn">Create Playlist →</button>
+                    </Link>
                 </div>
             </div>
         </>

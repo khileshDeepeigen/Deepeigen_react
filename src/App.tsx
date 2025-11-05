@@ -17,20 +17,27 @@ import FAQ from './pages/FAQ'
 import CourseDetails from './components/courses/CourseDetails'
 import MakePlaylist from './components/makePlaylist/MakePlaylist'
 import AboutUs from './pages/AboutUs'
+import ForgotPassword from './components/authentication/ForgotPassword'
+import { ResetPassword } from './components/authentication/ResetPassword'
+import { PasswordResetConfirmation } from './components/authentication/PasswordResetConfirmation'
 
 function App() {
 
   return (
-    <>
+    <> 
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/verification" element={<Verification />} />
+          <Route path="/forgot_password" element={<ForgotPassword />} />
+          <Route path="/reset_password" element={<ResetPassword />} />
+          <Route path="/password_reset_confirmation" element={<PasswordResetConfirmation />} />
+
           <Route path="/team" element={<Team/>} />
           <Route path="/career" element={<Careers />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contactus" element={<Contact />} />
           <Route path="/media" element={<Media />} />
 
           <Route path="/courses" element={<Courses />} />
