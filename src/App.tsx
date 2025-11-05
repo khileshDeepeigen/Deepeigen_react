@@ -24,7 +24,7 @@ import { PasswordResetConfirmation } from './components/authentication/PasswordR
 function App() {
 
   return (
-    <> 
+    <>
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<LandingPage />} />
@@ -33,9 +33,12 @@ function App() {
           <Route path="/verification" element={<Verification />} />
           <Route path="/forgot_password" element={<ForgotPassword />} />
           <Route path="/reset_password" element={<ResetPassword />} />
-          <Route path="/password_reset_confirmation" element={<PasswordResetConfirmation />} />
+          <Route path="/password_reset_confirmation" element={<PasswordResetConfirmation
+            email="test@example.com"
+            onResend={() => { }}
+          />} />
 
-          <Route path="/team" element={<Team/>} />
+          <Route path="/team" element={<Team />} />
           <Route path="/career" element={<Careers />} />
           <Route path="/contactus" element={<Contact />} />
           <Route path="/media" element={<Media />} />

@@ -2,7 +2,9 @@ import { useState } from "react"
 
 interface PasswordResetConfirmationProps {
   email: string
-  onResend?: () => Promise<void>
+  // onResend?: () => Promise<void>
+  onResend: () => void;
+
 }
 
 export function PasswordResetConfirmation({ email, onResend }: PasswordResetConfirmationProps) {
