@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import CourseCardList from '../courses/CourseCardList';
 import './courses.css';
 
@@ -80,9 +81,11 @@ export default function Courses() {
             <h1 className="course-hero-title">AI Courses</h1>
             <p className="course-hero-description">Explore all AI & ML courses from Basic to Advance</p>
           </div>
-          <button className="explore-button">
-            Explore All Courses →
-          </button>
+          <Link to="/courses">
+            <button className="explore-button">
+              Explore All Courses →
+            </button>
+          </Link>
         </div>
 
         <div className="courses-wrapper">

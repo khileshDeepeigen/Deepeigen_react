@@ -39,7 +39,7 @@ const CourseCardList: FC<CourseCardListProps> = ({ courses, useSwiper = false })
                 <Swiper
                     slidesPerView={3}
                     spaceBetween={20}
-                    pagination={{ clickable: true }}
+                    // pagination={{ clickable: true }}
                     navigation={true}
                     modules={[Pagination, Navigation]}
                     className="courseSwiper"

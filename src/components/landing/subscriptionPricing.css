@@ -23,6 +23,7 @@
   padding: 63px 20px;
   background: var(--pricing-bg-white);
   /* font-family: 'Bricolage Grotesque', -apple-system, Roboto, Helvetica, sans-serif; */
+  border: 1px solid black;
 }
 
 .pricing-header {
@@ -31,6 +32,10 @@
   margin: 0 auto 54px;
   text-align: center;
   /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .pricing-title {
@@ -43,11 +48,12 @@
 }
 
 .pricing-description {
-  color: var(--pricing-fg-grey-2);
-  font-size: clamp(16px, 3vw, 20px);
+  color: rgb(167, 149, 149);
+  font-size: clamp(16px, 3vw, 16px);
   font-weight: 300;
   line-height: normal;
   margin: 0;
+  max-width: 48vw;
 }
 
 .pricing-tabs {
@@ -107,7 +113,8 @@
 .pricing-card {
   display: flex;
   flex-direction: column;
-  padding: 48px 42px;
+  /* padding: 48px 42px; */
+  padding: 1vw 4vw;
   border-radius: 20px;
   border: 1px solid var(--pricing-border-grey-2);
   background: var(--pricing-bg-white);
@@ -368,19 +375,22 @@
   cursor: pointer;
   transition: background 0.3s ease;
 }
-.basic-access-btn{
+
+.basic-access-btn {
   border: 1px solid var(--pricing-bg-primary);
   color: var(--pricing-bg-primary);
   font-size: 16px;
   background: transparent;
 }
-.standard-access-btn{
+
+.standard-access-btn {
   border: 1px solid var(--pricing-bg-primary);
   color: var(--pricing-bg-primary);
   font-size: 16px;
   background: transparent;
 }
-.premium-access-btn{
+
+.premium-access-btn {
   background: var(--pricing-bg-primary);
   font-size: 20px;
 }
@@ -468,6 +478,10 @@
 }
 
 @media (max-width: 1200px) {
+    .pricing-description {
+  font-size: clamp(6px, 3vw, 16px);
+  max-width: 98vw;
+}
   .pricing-cards {
     flex-direction: column;
   }
@@ -495,7 +509,10 @@
   .pricing-header {
     margin-bottom: 32px;
   }
-
+  .pricing-description {
+  font-size: clamp(6px, 3vw, 12px);
+  max-width: 98vw;
+}
   .pricing-tabs {
     margin-bottom: 32px;
   }
@@ -522,10 +539,40 @@
 }
 
 @media (max-width: 480px) {
+  .pricing-description {
+  font-size: clamp(6px, 3vw, 12px);
+  max-width: 98vw;
+}
   .pricing-tabs {
-    flex-direction: column;
-    width: 100%;
-    gap: 8px;
+    gap: 4px;
+    padding: 5px;
+  }
+
+  .pricing-card {
+    min-width: 260px;
+    padding: 15px 20px;
+  }
+
+  .card-header {
+    margin-bottom: 5px;
+  }
+
+  .full-price-row {
+    gap: 2px;
+  }
+
+  .full-access-pricing {
+    gap: 5px;
+  }
+
+  .join-now-btn {
+    padding: 8px 10px;
+    height: 42px;
+  }
+
+  .premium-access-btn {
+    background: var(--pricing-bg-primary);
+    font-size: 15px;
   }
 
   .tab-button {

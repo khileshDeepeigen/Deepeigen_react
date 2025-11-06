@@ -1,12 +1,46 @@
+import { useState } from "react";
 import { Link } from "react-router-dom"
 
 const PricingCard = () => {
+
+    const pricingData = {
+        monthly: {
+            basic: { inr: 99, usd: 2 },
+            standard: { inr: 299, usd: 4 },
+            premium: { inr: 699, usd: 8 },
+        },
+        quarterly: {
+            basic: { inr: 249, usd: 5 },
+            standard: { inr: 749, usd: 10 },
+            premium: { inr: 1699, usd: 20 },
+        },
+        yearly: {
+            basic: { inr: 830, usd: 10 },
+            standard: { inr: 2999, usd: 50 },
+            premium: { inr: 3735, usd: 50 },
+        },
+    };
+
+    const [active, setActive] = useState("yearly");
+
+    const tabs = ["monthly", "quarterly", "yearly"];
+
+    const basic = pricingData[active].basic;
+    const standard = pricingData[active].standard;
+    const premium = pricingData[active].premium;
+
     return (
         <>
             <div className="pricing-tabs">
-                <button className="tab-button">Monthly</button>
-                <button className="tab-button">Quarterly</button>
-                <button className="tab-button tab-active">Yearly</button>
+                {tabs.map((tab) => (
+                    <button
+                        key={tab}
+                        onClick={() => setActive(tab)}
+                        className={`tab-button ${active === tab ? "tab-active" : ""}`}>
+                        {tab}
+                    </button>
+                ))}
+
             </div>
 
             <div className="pricing-content">
@@ -25,13 +59,13 @@ const PricingCard = () => {
                             <div className="full-price-row">
                                 <div className="price-group">
                                     <span className="currency">₹</span>
-                                    <span className="price-large">830</span>
+                                    <span className="price-large">{basic.inr}</span>
                                     <span className="price-period">/year</span>
                                 </div>
                                 <div className="price-divider"></div>
                                 <div className="price-group">
                                     <span className="currency-small">$</span>
-                                    <span className="price-medium">10</span>
+                                    <span className="price-medium">{basic.usd}</span>
                                     <span className="price-period-small">/year</span>
                                 </div>
                             </div>
@@ -163,13 +197,13 @@ const PricingCard = () => {
                             <div className="full-price-row">
                                 <div className="price-group">
                                     <span className="currency">₹</span>
-                                    <span className="price-large">830</span>
+                                    <span className="price-large">{standard.inr}</span>
                                     <span className="price-period">/year</span>
                                 </div>
                                 <div className="price-divider"></div>
                                 <div className="price-group">
                                     <span className="currency-small">$</span>
-                                    <span className="price-medium">50</span>
+                                    <span className="price-medium">{standard.usd}</span>
                                     <span className="price-period-small">/year</span>
                                 </div>
                             </div>
@@ -303,15 +337,15 @@ const PricingCard = () => {
                             <div className="full-price-row">
                                 <div className="price-group">
                                     <span className="currency">₹</span>
-                                    <span className="price-large">3,735</span>
-                                    <span className="price-strikethrough">₹9,999</span>
+                                    <span className="price-large">{premium.inr}</span>
+                                    {/* <span className="price-strikethrough">₹9,999</span> */}
                                     <span className="price-period">/year</span>
                                 </div>
                                 <div className="price-divider"></div>
                                 <div className="price-group">
                                     <span className="currency-small">$</span>
-                                    <span className="price-medium">50</span>
-                                    <span className="price-strikethrough-small">$75</span>
+                                    <span className="price-medium">{premium.usd}</span>
+                                    {/* <span className="price-strikethrough-small">$75</span> */}
                                     <span className="price-period-small">/year</span>
                                 </div>
                             </div>

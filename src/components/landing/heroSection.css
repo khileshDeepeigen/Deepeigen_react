@@ -202,15 +202,16 @@ body {
     text-align: center;
   }
   .hero__content{
-    /* border: 1px solid black; */
     max-width: 90%;
     justify-content: center;
     align-items: center;
   }
+  .hero__desc {
+  max-width: 100%;
+}
 
   .hero__media {
     max-width: 100%;
-    /* border: 1px solid black; */
   }
 
 .hero__media-oval {
@@ -251,7 +252,6 @@ body {
 }
 
   .features {
-    /* flex-direction: column; */
     padding: 1.5rem;
     margin-top: -1rem;
   }

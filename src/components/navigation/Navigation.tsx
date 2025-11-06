@@ -50,12 +50,12 @@ export default function Navigation() {
                 <path d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-80 py-3 z-50">
+            <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg mt-0 w-80 py-3 z-50">
               {COURSES.map((course) => (
                 <Link
                   key={course.id}
                   to={course.href}
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
                 >
                   {course.name}
                 </Link>
@@ -81,12 +81,12 @@ export default function Navigation() {
                 <path d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 py-3 z-50">
+            <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-lg mt-0 w-48 py-3 z-50">
               {COMPANY.map((item) => (
                 <Link
                   key={item.id}
                   to={item.href}
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
                 >
                   {item.name}
                 </Link>
@@ -143,7 +143,7 @@ export default function Navigation() {
           {coursesOpen && (
             <div className="pl-4 space-y-2">
               {COURSES.map((c) => (
-                <Link key={c.id} to={c.href} className="block text-gray-700 hover:text-blue-600">
+                <Link key={c.id} to={c.href} className="block bg-gray-50 text-gray-700 hover:text-blue-600">
                   {c.name}
                 </Link>
               ))}
@@ -172,7 +172,7 @@ export default function Navigation() {
           {companyOpen && (
             <div className="pl-4 space-y-2">
               {COMPANY.map((c) => (
-                <Link key={c.id} to={c.href} className="block text-gray-700 hover:text-blue-600">
+                <Link key={c.id} to={c.href} className="block bg-gray-50 text-gray-700 hover:text-blue-600">
                   {c.name}
                 </Link>
               ))}
