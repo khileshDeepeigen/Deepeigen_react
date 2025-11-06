@@ -19,11 +19,11 @@ const PricingCard = () => {
             standard: { inr: 2999, usd: 50 },
             premium: { inr: 3735, usd: 50 },
         },
-    };
+    } as const;
 
-    const [active, setActive] = useState("yearly");
+    const tabs = Object.keys(pricingData) as (keyof typeof pricingData)[];
+    const [active, setActive] = useState<keyof typeof pricingData>("yearly");
 
-    const tabs = ["monthly", "quarterly", "yearly"];
 
     const basic = pricingData[active].basic;
     const standard = pricingData[active].standard;
