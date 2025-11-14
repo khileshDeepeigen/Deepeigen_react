@@ -18,7 +18,6 @@ const Login: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
 
   const [rememberMe, setRememberMe] = useState(false)
-  const [error, setError] = useState('')
 
   // State to hold all form data
   const [formData, setFormData] = useState<FormData>({
@@ -51,11 +50,8 @@ const Login: React.FC = () => {
       console.log("formData.email", formData.email)
       dispatch(setUser({ email: formData.email, rememberMe }))
       navigate('/user_dashboard')
-      setError('')
     } else {
     console.log("1this is running")
-
-      setError('Invalid email or password');
     }
   };
 
