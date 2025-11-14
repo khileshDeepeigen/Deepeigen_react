@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo_svg from "../../assets/Logo/Vector 7.svg";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import type { RootState } from "../../redux/store";
 
 export default function Navigation() {
@@ -21,7 +21,6 @@ export default function Navigation() {
   ];
 
   const user = useSelector((state: RootState) => state.auth.user);
-  const dispatch = useDispatch();
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
