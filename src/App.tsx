@@ -21,6 +21,11 @@ import ForgotPassword from './components/authentication/ForgotPassword'
 import { ResetPassword } from './components/authentication/ResetPassword'
 import { PasswordResetConfirmation } from './components/authentication/PasswordResetConfirmation'
 
+import UserDashboard from './pages/UserDashboard'
+import Profile from './components/userDashboard/Profile'
+import Settings from './components/userDashboard/Settings'
+import Billing_Invoice from './components/userDashboard/BillingAndInvoices'
+
 function App() {
 
   return (
@@ -53,6 +58,11 @@ function App() {
           <Route path="/make_playlist" element={<MakePlaylist />} />
           <Route path="/about" element={<AboutUs />} />
 
+          {/* user dashboard */}
+          <Route path="/user_dashboard" element={<UserDashboard />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/billings_invoices" element={<Billing_Invoice />} />
         </Route>
       </ Routes>
     </>

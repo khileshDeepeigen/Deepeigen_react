@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import './auth.css'; // Import the external CSS file
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '../../redux/store';
+import { setUser } from '../../redux/slices/auth';
 
 // Define the shape for the form data
 interface FormData {
@@ -11,16 +14,24 @@ interface FormData {
 
 const Login: React.FC = () => {
 
+  const navigate = useNavigate();
+  const dispatch = useDispatch<AppDispatch>();
+
   const [rememberMe, setRememberMe] = useState(false)
-  
+  const [error, setError] = useState('')
+
   // State to hold all form data
   const [formData, setFormData] = useState<FormData>({
     email: '',
-    password: '',
+    password: ''
   });
 
   // State to toggle password visibility
   const [showPassword, setShowPassword] = useState(false);
+
+    // ---- MOCK TEST CREDENTIALS ----
+  const TEST_EMAIL = "test@example.com";
+  const TEST_PASSWORD = "123456";
 
   // Handle input changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -33,9 +44,19 @@ const Login: React.FC = () => {
 
   // Handle form submission (placeholder)
   const handleSubmit = (e: FormEvent) => {
+    console.log("this is running")
     e.preventDefault();
-    console.log('Registration Data:', formData);
-    // In a real application, you would send this data to an API
+
+    if (formData.email === TEST_EMAIL && formData.password === TEST_PASSWORD){
+      console.log("formData.email", formData.email)
+      dispatch(setUser({ email: formData.email, rememberMe }))
+      navigate('/user_dashboard')
+      setError('')
+    } else {
+    console.log("1this is running")
+
+      setError('Invalid email or password');
+    }
   };
 
 
@@ -51,6 +72,7 @@ const Login: React.FC = () => {
 
       {/* Right panel with the registration form */}
       <div className="register-panel-right">
+
         <h1 className="register-title">Login</h1>
         <p className="register-subtitle">Let's continue the learning</p>
 

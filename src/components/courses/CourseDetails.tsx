@@ -77,6 +77,7 @@ export default function CourseDetails() {
                             />
                         </div>
                     </div>
+                    
                     {/* Main Content */}
                     <div className="course-main">
                         <div className="course-main-content">

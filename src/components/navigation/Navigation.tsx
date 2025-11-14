@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo_svg from "../../assets/Logo/Vector 7.svg";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState } from "../../redux/store";
 
 export default function Navigation() {
   const COURSES = [
@@ -17,6 +19,9 @@ export default function Navigation() {
     { id: 2, name: "Career", href: "/career" },
     { id: 3, name: "Contact Us", href: "/contactus" },
   ];
+
+  const user = useSelector((state: RootState) => state.auth.user);
+  const dispatch = useDispatch();
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
@@ -96,14 +101,80 @@ export default function Navigation() {
         </div>
 
         {/* Desktop Buttons */}
-        <div className="hidden lg:flex gap-3">
-          <Link to="/login" className="px-5 py-2 border border-blue-600 text-blue-600 font-semibold rounded-md hover:bg-blue-600 hover:text-white transition">
-            Login
-          </Link>
-          <Link to="/register" className="px-5 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition">
-            Register
-          </Link>
+        <div className="hidden lg:flex items-center gap-3">
+          {!user ? (
+            <>
+              <Link
+                to="/login"
+                className="px-5 py-2 border border-blue-600 text-blue-600 font-semibold rounded-md hover:bg-blue-600 hover:text-white transition"
+              >
+                Login
+              </Link>
+
+              <Link
+                to="/register"
+                className="px-5 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition"
+              >
+                Register
+              </Link>
+            </>
+          ) : (
+            <div className="relative group">
+              {/* Avatar + Name */}
+              <button className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-50 transition">
+                <div className="bg-blue-600 text-white font-semibold w-10 h-10 rounded-full flex items-center justify-center">
+                  {"U"}
+                </div>
+                <div className="text-left leading-tight">
+                  <p className="font-semibold">John</p>
+                  <p className="text-sm text-gray-500">{user.email}</p>
+                </div>
+
+                <svg
+                  className="w-4 h-4 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {/* Dropdown */}
+              <div
+                className="absolute z-10 right-0 mt-0 w-56 bg-white shadow-xl rounded-lg py-2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition"
+              >
+                <Link
+                  to="/profile"
+                  className="flex gap-3 px-4 py-2 hover:bg-gray-50 text-sm"
+                >
+                  <span>👤</span> Profile
+                </Link>
+
+                {/* <Link
+                  to="/billings_invoices"
+                  className="flex gap-3 px-4 py-2 hover:bg-gray-50 text-sm"
+                >
+                  <span>💳</span> Billing & Invoices
+                </Link>
+
+                <Link
+                  to="/settings"
+                  className="flex gap-3 px-4 py-2 hover:bg-gray-50 text-sm"
+                >
+                  <span>⚙️</span> Settings
+                </Link> */}
+
+                <button
+                  className="flex gap-3 w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-red-600"
+                >
+                  <span>🚪</span> Log out
+                </button>
+              </div>
+            </div>
+          )}
         </div>
+
 
         {/* Mobile Toggle */}
         <button
@@ -179,17 +250,62 @@ export default function Navigation() {
             </div>
           )}
 
-          {/* Buttons */}
           <div className="pt-4 flex flex-col gap-2">
-            <Link to="/login" className="border border-blue-600 text-blue-600 font-semibold rounded-md py-2 text-center hover:bg-blue-600 hover:text-white transition">
-              Login
-            </Link>
-            <Link to="/register" className="bg-blue-600 text-white font-semibold rounded-md py-2 text-center hover:bg-blue-700 transition">
-              Register
-            </Link>
+            {!user ? (
+              <>
+                <Link
+                  to="/login"
+                  className="border border-blue-600 text-blue-600 font-semibold rounded-md py-2 text-center hover:bg-blue-600 hover:text-white transition"
+                >
+                  Login
+                </Link>
+
+                <Link
+                  to="/register"
+                  className="bg-blue-600 text-white font-semibold rounded-md py-2 text-center hover:bg-blue-700 transition"
+                >
+                  Register
+                </Link>
+              </>
+            ) : (
+              <div className="flex flex-col gap-3">
+                {/* Profile Info */}
+                <div className="flex items-center gap-3 p-2 border rounded-lg">
+                  <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center text-lg font-semibold">
+                    {"U"}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-800">John</p>
+                    <p className="text-sm text-gray-500">{user.email}</p>
+                  </div>
+                </div>
+
+                {/* Menu List */}
+                <Link to="/profile" className="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md flex gap-2 items-center">
+                  👤 Profile
+                </Link>
+
+                {/* <Link to="/billings_invoices" className="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md flex gap-2 items-center">
+                  💳 Billing & Invoices
+                </Link>
+
+                <Link to="/settings" className="px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md flex gap-2 items-center">
+                  ⚙️ Settings
+                </Link> */}
+
+                {/* Logout */}
+                <button
+                  className="px-3 py-2 text-red-600 hover:bg-gray-50 rounded-md flex gap-2 items-center"
+                >
+                  🚪 Log out
+                </button>
+              </div>
+            )}
           </div>
+
         </div>
-      )}
-    </nav>
+      )
+      }
+    </nav >
   );
 }
