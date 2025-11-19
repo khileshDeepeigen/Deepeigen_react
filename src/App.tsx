@@ -25,6 +25,7 @@ import UserDashboard from './pages/UserDashboard'
 import Profile from './components/userDashboard/Profile'
 import Settings from './components/userDashboard/Settings'
 import Billing_Invoice from './components/userDashboard/BillingAndInvoices'
+import CourseViewPage from './pages/CourseViewPage'
 
 function App() {
 
@@ -63,6 +64,8 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/billings_invoices" element={<Billing_Invoice />} />
+
+          <Route path="/course-view" element={<CourseViewPage />} />
         </Route>
       </ Routes>
     </>

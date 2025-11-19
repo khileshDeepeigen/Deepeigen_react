@@ -67,7 +67,7 @@ export default function Navigation() {
             </div>
           </div>
 
-          <Link to="#" className="text-gray-800 hover:text-blue-600 font-medium">AI Labs</Link>
+          {/* <Link to="#" className="text-gray-800 hover:text-blue-600 font-medium">AI Labs</Link>.. */}
           <Link to="/team" className="text-gray-800 hover:text-blue-600 font-medium">Team</Link>
           <Link to="/pricing" className="text-gray-800 hover:text-blue-600 font-medium">Pricing</Link>
 
@@ -220,7 +220,7 @@ export default function Navigation() {
             </div>
           )}
 
-          <Link to="#" className="block text-gray-800 font-medium">AI Labs</Link>
+          {/* <Link to="#" className="block text-gray-800 font-medium">AI Labs</Link> */}
           <Link to="/team" className="block text-gray-800 font-medium">Team</Link>
           <Link to="/pricing" className="block text-gray-800 font-medium">Pricing</Link>
 

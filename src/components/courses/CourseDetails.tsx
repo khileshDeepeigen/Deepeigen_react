@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./courseDetails.css";
+import { Link } from "react-router-dom";
 
 type TabType = "overview" | "curriculum" | "accessibility" | "refund" | "assignment";
 
@@ -77,7 +78,7 @@ export default function CourseDetails() {
                             />
                         </div>
                     </div>
-                    
+
                     {/* Main Content */}
                     <div className="course-main">
                         <div className="course-main-content">
@@ -262,9 +263,11 @@ export default function CourseDetails() {
                                 </div>
 
                                 {/* Buy Button */}
-                                <button className="course-button-primary">
-                                    Buy this course
-                                </button>
+                                <Link to="/course-view">
+                                    <button className="course-button-primary">
+                                        Buy this course
+                                    </button>
+                                </Link>
 
                                 {/* Divider with "or" */}
                                 <div className="course-divider">
