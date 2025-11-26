@@ -1,4 +1,4 @@
-import PricingComp from "../components/pricing/PricingComp"
+import PricingComp from "../components/pricing"
 
 const Pricing = () => {
   return (

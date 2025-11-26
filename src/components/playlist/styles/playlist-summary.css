@@ -1,0 +1,305 @@
+:root {
+  --pricing-bg-white: #FFF;
+  --pricing-fg-grey-1: #1A212F;
+  --pricing-fg-grey-2: rgba(26, 33, 47, 0.70);
+  --pricing-fg-grey-3: rgba(26, 33, 47, 0.40);
+  --pricing-fg-secondary: rgba(23, 76, 210, 0.48);
+  --pricing-bg-primary: #174CD2;
+  --pricing-fg-inverse-1: #FFF;
+  --pricing-border-grey-2: rgba(26, 33, 47, 0.24);
+  --pricing-fg-primary: #174CD2;
+  --pricing-border-primary: #174CD2;
+  --pricing-cat-a: #0F9C95;
+  --pricing-cat-b: #F59949;
+  --pricing-check-green: #0F9C0F;
+  --pricing-cross-red: #CE2823;
+  --pricing-best-value-bg: #FFE4C3;
+  --pricing-best-value-text: #8E5004;
+}
+
+.playlist-summary-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8e8f8 0%, #f0f0ff 100%);
+  padding: 24px;
+
+  .back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    padding: 8px 0;
+    margin-bottom: 24px;
+    transition: color 0.2s;
+  }
+
+  .back-button:hover {
+    color: #0066cc;
+  }
+
+  .playlist-summary-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .summary-card {
+    width: 100%;
+    max-width: 540px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .summary-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 32px 0;
+  }
+
+  /* Subscribe Section */
+  .subscribe-section {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .section-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 12px 0;
+  }
+
+  .duration-buttons {
+    display: flex;
+    padding: 2px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 100px;
+    border: 1px solid var(--pricing-fg-secondary);
+    width: fit-content;
+  }
+
+  .duration-btn {
+    display: flex;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: none;
+    background: transparent;
+    color: var(--pricing-fg-grey-1);
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .duration-btn:hover {
+    border-color: #999;
+  }
+
+  .duration-btn.active {
+    padding: 8px 16px;
+    background: var(--pricing-bg-primary);
+    color: var(--pricing-fg-inverse-1);
+    font-weight: 600;
+  }
+
+  /* Lectures Section */
+  .lectures-section {
+    margin-bottom: 24px;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .section-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--pricing-cat-b);
+  }
+
+  .lectures-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .lecture-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+  }
+
+  .lecture-row:hover {
+    background-color: #f0f0f0;
+  }
+
+  .lecture-icon-wrapper {
+    flex-shrink: 0;
+  }
+
+  .lecture-play-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #999;
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .lecture-play-btn:hover {
+    background-color: #666;
+  }
+
+  .lecture-content {
+    flex: 1;
+  }
+
+  .lecture-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .lecture-status {
+    flex-shrink: 0;
+  }
+
+  .lecture-price {
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+  }
+
+  .purchased-badge {
+    font-size: 12px;
+    font-weight: 600;
+    color: #00b368;
+  }
+
+  /* Assignment Section */
+  .assignment-section {
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  /* Total Section */
+  .total-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .total-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--pricing-check-green);
+  }
+
+  /* Payment Button */
+  .pay-button {
+    width: 100%;
+    padding: 14px 24px;
+    background: var(--pricing-bg-primary);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+  }
+
+  .pay-button:hover {
+    background: var(--pricing-bg-primary);
+  }
+
+  .pay-button:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .playlist-summary-wrapper {
+    padding: 16px;
+  }
+
+  .summary-card {
+    padding: 20px;
+  }
+
+  .summary-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .duration-buttons {
+    gap: 8px;
+  }
+
+  .duration-btn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .lecture-row {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .lecture-play-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 10px;
+  }
+
+  .lecture-name {
+    font-size: 12px;
+  }
+
+  .section-price {
+    font-size: 14px;
+  }
+
+  .total-price {
+    font-size: 18px;
+  }
+
+  .pay-button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}

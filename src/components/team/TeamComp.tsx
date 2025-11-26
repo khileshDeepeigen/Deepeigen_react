@@ -54,7 +54,7 @@ export default function TeamSection() {
   ];
 
   return (
-    <div className="team-page">
+    <div className="team-page-wrapper">
       <div className="team-container">
         <section className="team-section">
           <div className="section-header">

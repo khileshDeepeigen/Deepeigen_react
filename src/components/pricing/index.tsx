@@ -1,8 +1,10 @@
-import CourseCardList from "../courses/CourseCardList";
-import PricingCard from "./PricingCard"
-import "./pricingComp.css"
+import CourseCardList from "../courses/CourseCardList"
+import CustomPlaylistCard from "./CustomPlaylistCard";
+import SubscriptionCard from "./SubscriptionCard";
 
-const PricingComp = () => {
+import "./styles/pricing.css"
+
+const index = () => {
 
     const allCourses = [
         {
@@ -74,27 +76,37 @@ const PricingComp = () => {
     ];
 
     return (
-        <div className="Pricing__Page">
-            <div className="Pricing__UserHeader">
-                <h1>
-                    Welcome, John
-                </h1>
-                <p>Start your learning with DeepEigen</p>
-            </div>
-            <div className="Pricing__Container">
-                <div className="P__Subscription">
-                    <PricingCard />
+        <>
+            <div className="Pricing-page-wrapper">
+                <div className="Pricing__UserHeader">
+                    <h1>
+                        Welcome, John
+                    </h1>
+                    <p>Start your learning with DeepEigen</p>
                 </div>
-                <div className="P__Courses">
-                    <div className="P__Course_Header">
-                        <h1>All Courses</h1>
-                        <p>Explore all AI & ML courses from Basic to Advance</p>
+                <div className="Pricing__Container">
+                    <div className="P__Subscription">
+                        <SubscriptionCard />
+
+                        <div className="or-divider">
+                            <div className="line"></div>
+                            <span>Or</span>
+                            <div className="line"></div>
+                        </div>
+
+                        <CustomPlaylistCard />
                     </div>
-                    <CourseCardList courses={allCourses} />
+                    <div className="P__Courses">
+                        <div className="P__Course_Header">
+                            <h1>All Courses</h1>
+                            <p>Explore all AI & ML courses from Basic to Advance</p>
+                        </div>
+                        <CourseCardList courses={allCourses} />
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
-export default PricingComp
+export default index

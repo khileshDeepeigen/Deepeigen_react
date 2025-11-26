@@ -44,7 +44,7 @@ const FooterLinks = () => (
             <h4>Deep Eigen AI Labs</h4>
             <div className="footer__list">
                 <p>
-                    <Link to="/about">
+                    <Link to="/about-us">
                         About Us
                     </Link>
                 </p>

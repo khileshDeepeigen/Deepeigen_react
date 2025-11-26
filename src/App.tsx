@@ -16,7 +16,7 @@ import PrivacyPolicyGDPR from './pages/PrivacyPolicyGDPR'
 import FAQ from './pages/FAQ'
 import CourseDetails from './components/courses/CourseDetails'
 import MakePlaylist from './components/makePlaylist/MakePlaylist'
-import AboutUs from './pages/AboutUs'
+import AboutUs from './pages/AboutUsPage'
 import ForgotPassword from './components/authentication/ForgotPassword'
 import { ResetPassword } from './components/authentication/ResetPassword'
 import { PasswordResetConfirmation } from './components/authentication/PasswordResetConfirmation'
@@ -26,6 +26,7 @@ import Profile from './components/userDashboard/Profile'
 import Settings from './components/userDashboard/Settings'
 import Billing_Invoice from './components/userDashboard/BillingAndInvoices'
 import CourseViewPage from './pages/CourseViewPage'
+import PlaylistSummary from './components/playlist/Playlist-Summary'
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/about-us" element={<AboutUs />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/verification" element={<Verification />} />
@@ -57,7 +59,6 @@ function App() {
           <Route path="/faqs" element={<FAQ />} />
           <Route path="/course_details" element={<CourseDetails />} />
           <Route path="/make_playlist" element={<MakePlaylist />} />
-          <Route path="/about" element={<AboutUs />} />
 
           {/* user dashboard */}
           <Route path="/user_dashboard" element={<UserDashboard />} />
@@ -66,6 +67,8 @@ function App() {
           <Route path="/billings_invoices" element={<Billing_Invoice />} />
 
           <Route path="/course-view" element={<CourseViewPage />} />
+
+          <Route path="/playlist-summary" element={<PlaylistSummary/>} />
         </Route>
       </ Routes>
     </>
