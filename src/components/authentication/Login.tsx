@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { FormEvent } from 'react';
 import './auth.css'; // Import the external CSS file
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import type { AppDispatch } from '../../redux/store';
 import { setUser } from '../../redux/slices/auth';
+
+import { postRequest } from '../../utils/api'
+import GoogleLoginButton from './GoogleLogin';
 
 // Define the shape for the form data
 interface FormData {
@@ -27,10 +30,8 @@ const Login: React.FC = () => {
 
   // State to toggle password visibility
   const [showPassword, setShowPassword] = useState(false);
-
-    // ---- MOCK TEST CREDENTIALS ----
-  const TEST_EMAIL = "test@example.com";
-  const TEST_PASSWORD = "123456";
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   // Handle input changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -42,19 +43,47 @@ const Login: React.FC = () => {
   };
 
   // Handle form submission (placeholder)
-  const handleSubmit = (e: FormEvent) => {
-    console.log("this is running")
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setLoading(true)
+    setErrorMsg("");
 
-    if (formData.email === TEST_EMAIL && formData.password === TEST_PASSWORD){
-      console.log("formData.email", formData.email)
-      dispatch(setUser({ email: formData.email, rememberMe }))
-      navigate('/user_dashboard')
-    } else {
-    console.log("1this is running")
+    try {
+      const res = await postRequest("accounts/login/", {
+        email: formData.email,
+        password: formData.password,
+      })
+      // console.log("Login success full_", res)
+
+      if (!res) {
+        setErrorMsg("Something went wrong. Try again later.")
+        return;
+      }
+
+      // hanlde error response
+      if (res?.status !== 200 || !res?.data?.user) {
+        setErrorMsg(res.data?.error || res.data?.message || "Invalid credentials");
+        return;
+      }
+
+      const user = res.data.user;
+      dispatch(setUser(user));
+      navigate("/user_dashboard");
+
+    } catch (error) {
+      console.error("err")
+      setErrorMsg("Something went wrong. Try again later.")
+
+    } finally {
+      setLoading(false)
     }
   };
 
+  useEffect(() => {
+    fetch("http://localhost:8000/accounts/get-csrf-token", {
+      credentials: "include",
+    });
+  }, []);
 
   return (
     <div className="register-page">
@@ -73,7 +102,6 @@ const Login: React.FC = () => {
         <p className="register-subtitle">Let's continue the learning</p>
 
         <form className="register-form" onSubmit={handleSubmit}>
-
 
           <div className="form-group">
             <label htmlFor="email">Email<span className="required">*</span></label>
@@ -114,12 +142,12 @@ const Login: React.FC = () => {
 
           <div className='login__rememberMeForm'>
             <label className='login__rememberMe'>
-                <input 
+              <input
                 className='remember_checkbox'
                 type="checkbox"
-                checked = {rememberMe}
-                onChange={(e)=> setRememberMe(e.target.checked)} 
-                />
+                checked={rememberMe}
+                onChange={(e) => setRememberMe(e.target.checked)}
+              />
               <span>Remember me</span>
             </label>
             <Link to="/forgot_password" className='login__forgotPassword'>
@@ -127,10 +155,20 @@ const Login: React.FC = () => {
             </Link>
           </div>
 
+          {errorMsg && (
+            <div className="w-full bg-red-50 border border-red-300 text-red-700 px-4 py-2 rounded-lg text-sm mb-4">
+              {errorMsg}
+            </div>
+          )}
+
           <button type="submit" className="register-button">
-            Login
+            {loading ? "Logging in..." : "login"}
           </button>
         </form>
+
+        <button>
+          <GoogleLoginButton />
+        </button>
 
         <p className="login-link-container">
           Don't have an have an account? <Link to="/register" className="login-link">Register</Link>

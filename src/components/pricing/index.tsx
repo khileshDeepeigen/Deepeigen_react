@@ -85,17 +85,16 @@ const index = () => {
                     <p>Start your learning with DeepEigen</p>
                 </div>
                 <div className="Pricing__Container">
-                    <div className="P__Subscription">
-                        <SubscriptionCard />
+                    <SubscriptionCard />
 
-                        <div className="or-divider">
-                            <div className="line"></div>
-                            <span>Or</span>
-                            <div className="line"></div>
-                        </div>
-
-                        <CustomPlaylistCard />
+                    <div className="or-divider">
+                        <div className="line"></div>
+                        <span>Or</span>
+                        <div className="line"></div>
                     </div>
+
+                    <CustomPlaylistCard />
+                    
                     <div className="P__Courses">
                         <div className="P__Course_Header">
                             <h1>All Courses</h1>

@@ -20,13 +20,10 @@
 }
 
 .Pricing-page-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 
     .Pricing__UserHeader {
+
+        width: 100%;
         padding: 80px 10vw;
         width: 100%;
         height: 30vh;
@@ -48,6 +45,32 @@
 
     .Pricing__Container {
         padding: 40px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .or-divider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 27px;
+        margin: 24px 0;
+    }
+
+    .or-divider .line {
+        flex: 1;
+        height: 1px;
+        background: var(--pricing-border-grey-2);
+    }
+
+    .or-divider span {
+        color: var(--pricing-fg-grey-1);
+        font-size: 16px;
+    }
+
+    .P__Courses {
         width: 80vw;
     }
 
@@ -64,6 +87,14 @@
             margin-top: 10px;
             font-size: 20px;
             font-weight: 300;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .Pricing-page-wrapper {
+        .P__Courses {
+            width: 95vw;
         }
     }
 }

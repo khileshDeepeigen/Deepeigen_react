@@ -30,7 +30,6 @@
     width: 80vw;
     margin: 0 auto 54px;
     text-align: center;
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,11 +50,8 @@
     font-size: clamp(16px, 3vw, 16px);
     font-weight: 300;
     line-height: normal;
-    margin: 0;
     max-width: 48vw;
   }
-
-
 
   .or-divider {
     display: flex;
@@ -79,30 +75,40 @@
 }
 
 @media (max-width: 1200px) {
-  .pricing-description {
-    font-size: clamp(6px, 3vw, 16px);
-    max-width: 98vw;
+  .Subscription-container-wrapper {
+    .pricing-description {
+      font-size: clamp(6px, 3vw, 16px);
+      max-width: 95vw;
+    }
   }
 }
 
 @media (max-width: 768px) {
   .Subscription-container-wrapper {
     padding: 40px 16px;
+
+    .pricing-header {
+      margin-bottom: 32px;
+    }
+
+    .pricing-description {
+      font-size: clamp(6px, 3vw, 16px);
+      max-width: 98vw;
+    }
   }
 
-  .pricing-header {
-    margin-bottom: 32px;
-  }
-
-  .pricing-description {
-    font-size: clamp(6px, 3vw, 12px);
-    max-width: 98vw;
-  }
 }
 
 @media (max-width: 480px) {
-  .pricing-description {
-    font-size: clamp(6px, 3vw, 12px);
-    max-width: 98vw;
+  .Subscription-container-wrapper {
+    padding: 0px 0px;
+
+    .pricing-description {
+      max-width: 98vw;
+    }
+
+    .pricing-header {
+      width: 95vw;
+    }
   }
 }

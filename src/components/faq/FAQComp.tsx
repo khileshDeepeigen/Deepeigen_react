@@ -175,7 +175,7 @@ const FAQComp = () => {
     };
 
     return (
-        <section className="faq">
+        <section className="faq_wrapper">
             <h2 className="faq__title">Frequently Asked Questions</h2>
 
             {faqs.map((faq, index: number) => (

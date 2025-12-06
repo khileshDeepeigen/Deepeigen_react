@@ -15,7 +15,6 @@ export default function SubscriptionPricing() {
         </p>
       </div>
 
-      <div>
         <SubscriptionCard />
 
         <div className="or-divider">
@@ -25,7 +24,6 @@ export default function SubscriptionPricing() {
         </div>
 
         <CustomPlaylistCard />
-      </div>
 
     </div>
   );
