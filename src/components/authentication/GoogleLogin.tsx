@@ -3,7 +3,6 @@ import { jwtDecode } from "jwt-decode";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import type { AppDispatch } from "../../redux/store";
-import { useState } from "react";
 import { setUser } from "../../redux/slices/auth";
 
 interface GoogleUser {
